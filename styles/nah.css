@@ -1,0 +1,255 @@
+/* nah.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #111; /* Very dark background */
+  color: #fff; /* White text for contrast */
+  text-align: center;
+  padding: 50px 10px;
+  overflow: hidden; /* Disables scrolling */
+  animation: pulseBackground 1.5s infinite alternate; /* Pulsing background effect */
+}
+
+@keyframes pulseBackground {
+  0% {
+    background-color: #111;
+  }
+  100% {
+    background-color: #1a1a1a; /* Subtle pulse of darker shades */
+  }
+}
+
+h1 {
+  font-size: 3em;
+  color: #ff0000; /* Bright red for extreme intensity */
+  margin-bottom: 20px;
+  animation: glow 1.5s ease-in-out infinite alternate; /* Glowing effect */
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+  }
+  100% {
+    text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff0000;
+  }
+}
+
+p.js-result {
+  font-size: 1.5em;
+  color: #ff4081; /* Neon pink */
+  margin-bottom: 20px;
+  animation: shake 0.8s ease infinite; /* Shake effect */
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+input.js-number {
+  font-size: 1.5em;
+  padding: 15px;
+  border-radius: 8px;
+  border: 3px solid #ff4081;
+  width: 90%; /* Full width on small screens */
+  max-width: 350px; /* Limit the width on larger screens */
+  margin-bottom: 30px;
+  background-color: #222;
+  color: #fff;
+  animation: flicker 1s infinite; /* Flicker effect for the input */
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+button.js-check {
+  background-color: #ff4081; /* Neon pink */
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: pulseButton 1.5s infinite alternate; /* Button pulsating effect */
+}
+
+@keyframes pulseButton {
+  0% {
+    transform: scale(1);
+    background-color: #ff4081;
+  }
+  100% {
+    transform: scale(1.1);
+    background-color: #f50057;
+  }
+}
+
+button.js-check:hover {
+  background-color: #d5004f; /* Darker neon pink on hover */
+  transform: scale(1.1);
+}
+
+button {
+  background-color: #d50057;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  margin: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  animation: bounceButton 0.5s ease infinite; /* Button bounce effect */
+}
+
+@keyframes bounceButton {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+button:hover {
+  background-color: #c51162;
+}
+
+h3 {
+  font-size: 2em;
+  color: #ff4081;
+  margin-top: 40px;
+}
+
+.score {
+  font-size: 1.5em;
+  color: #ff0000;
+  margin-top: 20px;
+  animation: pulseScore 1s ease-in-out infinite alternate; /* Pulsing score */
+}
+
+@keyframes pulseScore {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+/* Mobile-first design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  input.js-number {
+    font-size: 1.2em;
+    padding: 12px;
+  }
+
+  button.js-check {
+    font-size: 1.2em;
+    padding: 12px 25px;
+  }
+
+  .score {
+    font-size: 1.2em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  button {
+    font-size: 1.1em;
+    padding: 10px 20px;
+    margin: 10px 5px;
+  }
+
+  /* Style for difficulty buttons */
+  .difficulty-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .difficulty-buttons button {
+    font-size: 1.2em;
+    margin: 10px 5px;
+    padding: 12px 20px;
+    width: 45%; /* Make them smaller on mobile */
+  }
+}
+
+/* Larger screens */
+@media (min-width: 600px) {
+  body {
+    padding: 50px;
+  }
+
+  input.js-number {
+    font-size: 1.5em;
+    padding: 15px;
+  }
+
+  button.js-check {
+    font-size: 1.5em;
+    padding: 15px 30px;
+  }
+
+  button {
+    font-size: 1.3em;
+    padding: 15px 30px;
+  }
+
+  h3 {
+    font-size: 2em;
+  }
+
+  /* Style for difficulty buttons */
+  .difficulty-buttons {
+    display: flex;
+    justify-content: space-evenly; /* Adjust the spacing to make sure they fit */
+    flex-wrap: wrap;
+  }
+
+  .difficulty-buttons button {
+    font-size: 1.3em;
+    margin: 10px;
+    padding: 12px 25px;
+    max-width: 200px; /* Limit the width of the buttons to ensure they fit */
+  }
+}

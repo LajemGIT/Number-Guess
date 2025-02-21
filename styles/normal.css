@@ -1,0 +1,78 @@
+/* easy.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0; /* Light grey background */
+  color: #333; /* Dark text for better readability */
+  text-align: center;
+  padding: 50px 10px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #4caf50; /* Green for the header */
+  margin-bottom: 20px;
+}
+
+p.js-result {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+input.js-number {
+  font-size: 1.1em;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #4caf50; /* Matching green border */
+  width: 220px;
+  margin-bottom: 20px;
+}
+
+button.js-check {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.js-check:hover {
+  background-color: #388e3c; /* Darker green on hover */
+}
+
+button {
+  background-color: #8bc34a; /* Lighter green for other buttons */
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1em;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #7cb342; /* Slightly darker green on hover */
+}
+
+h3 {
+  font-size: 1.5em;
+  color: #4caf50;
+  margin-top: 30px;
+}
+
+.score {
+  font-size: 1.2em;
+  color: #4caf50;
+  margin-top: 20px;
+}

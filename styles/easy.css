@@ -1,0 +1,78 @@
+/* easy.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e8f5e9; /* Soft light green background */
+  color: #2e7d32; /* Dark green text */
+  text-align: center;
+  padding: 50px 10px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #388e3c; /* Fresh green */
+  margin-bottom: 20px;
+}
+
+p.js-result {
+  font-size: 1.2em;
+  color: #388e3c;
+  margin-bottom: 20px;
+}
+
+input.js-number {
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #388e3c;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+button.js-check {
+  background-color: #388e3c;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.js-check:hover {
+  background-color: #2c6b2f; /* Darker green on hover */
+}
+
+button {
+  background-color: #a5d6a7; /* Light green */
+  color: #2e7d32;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #81c784; /* Slightly darker green on hover */
+}
+
+h3 {
+  font-size: 1.5em;
+  color: #388e3c;
+  margin-top: 30px;
+}
+
+.score {
+  font-size: 1.2em;
+  color: #388e3c;
+  margin-top: 20px;
+}
