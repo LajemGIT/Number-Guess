@@ -1,3 +1,5 @@
+PLAY HERE: https://lajemgit.github.io/Number-Guess/html/normal.html  
+
 # Number Guessing Game
 
 This is a Number Guessing Game that I created as part of my learning process to enhance my web development skills. It allows users to guess a randomly generated number within different difficulty levels, ranging from easy to "impossible" challenges.
@@ -32,4 +34,4 @@ The primary goal of this project is learning and experimentation. I used this pr
 
 1. Go to the repository and Click the Github pages or Go Here:
 
-https://lajemgit.github.io/Number-Guess/
+https://lajemgit.github.io/Number-Guess/html/normal.html
