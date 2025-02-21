@@ -7,61 +7,53 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #111; /* Very dark background */
-  color: #fff; /* White text for contrast */
+  background-color: #111;
+  color: #fff;
   text-align: center;
   padding: 50px 10px;
-  overflow: hidden; /* Disables scrolling */
-  animation: pulseBackground 1.5s infinite alternate; /* Pulsing background effect */
+  animation: fadeIn 1s ease-in; /* Fade-in effect for the whole page */
 }
 
-@keyframes pulseBackground {
+@keyframes fadeIn {
   0% {
-    background-color: #111;
+    opacity: 0;
   }
   100% {
-    background-color: #1a1a1a; /* Subtle pulse of darker shades */
+    opacity: 1;
   }
 }
 
 h1 {
   font-size: 3em;
-  color: #ff0000; /* Bright red for extreme intensity */
+  color: #ff4081; /* Neon pink */
   margin-bottom: 20px;
-  animation: glow 1.5s ease-in-out infinite alternate; /* Glowing effect */
+  animation: slideIn 1s ease-out; /* Slide-in effect for the title */
 }
 
-@keyframes glow {
+@keyframes slideIn {
   0% {
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+    transform: translateY(-50px);
+    opacity: 0;
   }
   100% {
-    text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff0000;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
 p.js-result {
   font-size: 1.5em;
-  color: #ff4081; /* Neon pink */
+  color: #ff4081;
   margin-bottom: 20px;
-  animation: shake 0.8s ease infinite; /* Shake effect */
+  animation: fadeInText 1s ease-in-out; /* Fade-in effect for the result text */
 }
 
-@keyframes shake {
+@keyframes fadeInText {
   0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-10px);
-  }
-  50% {
-    transform: translateX(10px);
-  }
-  75% {
-    transform: translateX(-10px);
+    opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -70,23 +62,20 @@ input.js-number {
   padding: 15px;
   border-radius: 8px;
   border: 3px solid #ff4081;
-  width: 90%; /* Full width on small screens */
-  max-width: 350px; /* Limit the width on larger screens */
+  width: 90%; /* Full width on smaller screens */
+  max-width: 350px; /* Limit width on larger screens */
   margin-bottom: 30px;
   background-color: #222;
   color: #fff;
-  animation: flicker 1s infinite; /* Flicker effect for the input */
+  animation: pulseInput 1s infinite alternate; /* Slight pulse effect for the input */
 }
 
-@keyframes flicker {
+@keyframes pulseInput {
   0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.3;
+    transform: scale(1);
   }
   100% {
-    opacity: 1;
+    transform: scale(1.05);
   }
 }
 
@@ -98,24 +87,21 @@ button.js-check {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  animation: pulseButton 1.5s infinite alternate; /* Button pulsating effect */
+  transition: background-color 0.3s ease;
+  animation: fadeInButton 1s ease-in-out; /* Fade-in effect for the button */
 }
 
-@keyframes pulseButton {
+@keyframes fadeInButton {
   0% {
-    transform: scale(1);
-    background-color: #ff4081;
+    opacity: 0;
   }
   100% {
-    transform: scale(1.1);
-    background-color: #f50057;
+    opacity: 1;
   }
 }
 
 button.js-check:hover {
-  background-color: #d5004f; /* Darker neon pink on hover */
-  transform: scale(1.1);
+  background-color: #d5004f;
 }
 
 button {
@@ -127,7 +113,6 @@ button {
   margin: 15px;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   animation: bounceButton 0.5s ease infinite; /* Button bounce effect */
 }
 
@@ -136,7 +121,7 @@ button {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
   }
   100% {
     transform: translateY(0);
@@ -151,22 +136,14 @@ h3 {
   font-size: 2em;
   color: #ff4081;
   margin-top: 40px;
+  animation: fadeInText 1s ease-in-out; /* Fade-in effect for the h3 */
 }
 
 .score {
   font-size: 1.5em;
   color: #ff0000;
   margin-top: 20px;
-  animation: pulseScore 1s ease-in-out infinite alternate; /* Pulsing score */
-}
-
-@keyframes pulseScore {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.2);
-  }
+  animation: fadeInText 1s ease-in-out; /* Fade-in effect for the score */
 }
 
 /* Mobile-first design */
@@ -199,7 +176,7 @@ h3 {
     margin: 10px 5px;
   }
 
-  /* Style for difficulty buttons */
+  /* Difficulty buttons */
   .difficulty-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -210,7 +187,7 @@ h3 {
     font-size: 1.2em;
     margin: 10px 5px;
     padding: 12px 20px;
-    width: 45%; /* Make them smaller on mobile */
+    width: 45%; /* Smaller on mobile */
   }
 }
 
@@ -239,10 +216,10 @@ h3 {
     font-size: 2em;
   }
 
-  /* Style for difficulty buttons */
+  /* Difficulty buttons */
   .difficulty-buttons {
     display: flex;
-    justify-content: space-evenly; /* Adjust the spacing to make sure they fit */
+    justify-content: space-evenly;
     flex-wrap: wrap;
   }
 
@@ -250,6 +227,6 @@ h3 {
     font-size: 1.3em;
     margin: 10px;
     padding: 12px 25px;
-    max-width: 200px; /* Limit the width of the buttons to ensure they fit */
+    max-width: 200px;
   }
 }
